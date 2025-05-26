@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "title": "Phone Stand",
+      "description": "A customizable 3D-printed phone stand.",
+      "image": "photos/sample1.png"
+    },
+    {
+      "title": "Key Holder",
+      "description": "Stylish wall-mounted key holder.",
+      "image": "photos/sample2.png"
+    },
+    {
+      "title": "Headphone Hanger",
+      "description": "Desk clamp headphone holder.",
+      "image": "photos/sample3.png"
+    },
+    {
+      "title": "Mini Drawer",
+      "description": "Small item organizer for desks.",
+      "image": "photos/sample4.png"
+    },
+    {
+      "title": "USB Cable Winder",
+      "description": "Keeps your charging cables tidy.",
+      "image": "photos/sample5.png"
+    },
+    {
+      "title": "Game Controller Stand",
+      "description": "Stand for Xbox and PS controllers.",
+      "image": "photos/sample6.png"
+    },
+    {
+      "title": "Tablet Stand",
+      "description": "Adjustable multi-angle tablet holder.",
+      "image": "photos/sample7.png"
+    },
+    {
+      "title": "Pen Organizer",
+      "description": "Organize your pens and markers.",
+      "image": "photos/sample8.png"
+    },
+    {
+      "title": "Mini Tool Rack",
+      "description": "Perfect for tiny screwdrivers and bits.",
+      "image": "photos/sample9.png"
+    }
+  ]
+}

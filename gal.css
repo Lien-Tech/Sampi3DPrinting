@@ -1,0 +1,515 @@
+/* Navigation Bar */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles and Variables */
+:root {
+    --primary-color: #2c7eb1;
+    --secondary-color: #cc7a00;
+    --accent-color: #4caf50;
+    --gradient-color: #ff9800;
+    --font-family: sans-serif;
+    --font-size-large: 70px;
+    --font-size-medium: 1.5em;
+    --font-size-small: 1em;
+    --navbar-border-color: #0000002a;
+    --text-color: #000;
+    --white-color: #fff;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/* THIS IS FOR THE LOGO */
+.logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Navigation Bar */
+.navbarr {
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
+    z-index: 1000; /* Ensures it stays on top */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  /* Underline hover effect */
+  .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #2c7eb1;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+  .login-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    font-family: var(--font-family);
+  }
+  
+  
+  .login-btn a {
+    text-decoration: none;
+    color: white;
+    background-color: #2c7eb1;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .login-btn a:hover {
+    background-color: #1e5f81;
+    transform:  scale(1.05);
+  }
+  
+  .login-btn:active {
+    background-color: var(--secondary-color);
+    transform: scale(0.98);
+  }
+  
+  /* Mobile (small screens) styles */
+  @media (max-width: 768px) {
+    .navbarr {
+      flex-direction: column; 
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .navbar {
+      display: none; 
+      flex-direction: column; /* Stack the links vertically */
+      width: 100%; /* Ensure full width for the menu */
+      gap: 10px; /* Reduce gap between items */
+    }
+  
+    .navbar a {
+      font-size: 16px; /* Smaller font size on mobile */
+    }
+  
+    /* Hamburger Menu */
+    .navbar-toggler {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 5px 0;
+      transition: transform 0.3s ease;
+    }
+  
+    .navbar-toggler.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); /* Cross */
+    }
+  
+    .navbar-toggler.active span:nth-child(2) {
+      opacity: 0; /* Hide middle line */
+    }
+  
+    .navbar-toggler.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px); /* Cross */
+    }
+  }
+  
+  /* Media Query to show the menu when the hamburger is clicked */
+  @media (max-width: 768px) {
+    .navbar-toggler.active + .navbar {
+      display: flex; /* Show the navbar links when the hamburger is active */
+    }
+  }
+
+
+
+/* GALLERY GALLERY */
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+  margin-top: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: 1.3px;
+  font-family: 'Orbitron';
+  color: #222;
+}
+h1 span {
+  color: #007bff;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.missu h3 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 8px 0 40px;
+  color: #555;
+  max-width: 700px;
+  font-family: sans-serif;
+}
+
+/* Flex and Grid Wrappers */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+.iyaa {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 50px;
+  justify-items: center;
+}
+
+/* Flip Card Base */
+.flip-card {
+  font-family: sans-serif;
+  width: 260px;
+  height: 350px;
+  perspective: 1200px;
+  cursor: pointer;
+  border-radius: 12px;
+  background: white;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.flip-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 24px 40px rgba(0,0,0,0.25);
+  z-index: 10;
+  border: 2px solid #007bff;
+}
+
+/* Flip animation */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* Front image */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  user-select: none;
+}
+.flip-card:hover .flip-card-front img {
+  transform: scale(1.05);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  line-height: 1.4;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .iyaa {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .iyaa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .missu h3 {
+    font-size: 1rem;
+  }
+  .flip-card {
+    width: 90vw;
+    height: 320px;
+  }
+  .iyaa {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+.flip-card-back p {
+  font-size: 15px !important;
+}
+
+
+
+
+/* FOOTER FOOTER FOOOTER*/
+.centered-content {
+    text-align: center; /* Centers text and inline elements */
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 20px;
+}
+  
+.centered-content .logo-section {
+    display: flex; /* Flexbox layout for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally align items to the center */
+}
+  
+.centered-content .logo-section img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's treated as a block element */
+    margin-bottom: 10px; /* Add spacing between image and text */
+}
+  
+.centered-content .logo-section p {
+    font-style: italic;
+    font-size: 100%;
+    margin: 0px 0; /* Reduce gap between text lines */
+    text-align: center; /* Ensures text aligns in the center */
+}
+  
+.text {
+    
+    font-weight: bold;
+    font-size: 180%;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: sans-serif;
+}
+
+.bottom-text {
+    color: #000;
+    margin-top: 40px;
+    font-family: sans-serif;
+    font-size: 300%;
+}
+  
+.talk-link {
+    color: #2873A2;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #2873A2;
+}
+  
+.talk-link:hover {
+    color: #1b5c7d;
+    border-bottom: 1px solid #1b5c7d;
+}
+  
+.container-footer{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+  
+.footer-copyright {
+    text-align: center;
+    padding-top: 5rem;
+    color: #bbb;
+    font-size: 14px;
+}
+
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+}
+}

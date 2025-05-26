@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What we do",
+        "answer": "We specialize in 3D printing services including prototyping, custom designs, and small batch manufacturing."
+    },
+    {
+        "question": "How do I place an order?",
+        "answer": "You can place an order by contacting us via our contact page or through our social media accounts. Please include your design or idea."
+    },
+    {
+        "question": "What file formats do you accept for 3D models?",
+        "answer": "We accept STL, OBJ, and 3MF file formats. If you have a different format, contact us to confirm compatibility."
+    },
+    {
+        "question": "How long does it take to print an item?",
+        "answer": "Printing time depends on the size and complexity of the model. Small objects may take a few hours, while larger ones can take a day or more."
+    },
+    {
+        "question": "Do you offer delivery services?",
+        "answer": "Yes, we offer delivery services within the local area. Additional fees may apply depending on your location."
+    }
+]

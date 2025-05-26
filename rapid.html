@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d sampi printing service</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="admin.js"></script>
+html {
+  scroll-behavior: smooth;
+}
+
+</head>
+<body>
+    <nav>
+        <div class="navbarr">
+            <a href="#" class="navbar-brand">
+                <img src="photos/sampi.png" alt="Your Logo" class="logo" />
+                3D Sampi Printing Service
+            </a>
+            <div class="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar">
+            <button id="editButton">Edit Content</button>
+            <li><a href="adsampi.html">Home</a></li>
+            <li><a href="adabout.html">About Us</a></li>
+            <li><a href="adcontacts.html">Contact</a></li>
+            <li><a href="adgallery.html">Gallery</a></li>
+            <li><a href="adhelpcenter.html">FAQs</a></li>
+            <li><button class="login-btn"><a href="sign_up.html">Log Out</a></button></li>
+        </div>
+    </nav>
+
+    <br>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="photos/Property 1=Frame 2.jpg" class="d-block w-100" alt="3D Printing Service">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span></h1>
+                    <h5>Offers 3D printing services, including prototyping, product design, and custom manufacturing.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photos/Property 1=Frame 3.jpg" class="d-block w-100" alt="Prototyping">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span></h1>
+                    <h5>Offers 3D printing services, including prototyping, product design, and custom manufacturing.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="photos/Property 1=Frame 4.jpg" class="d-block w-100" alt="Custom Manufacturing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span></h1>
+                    <h5>Offers 3D printing services, including prototyping, product design, and custom manufacturing.</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+<section id="rapidSection"> 
+        <ul class="header-option">
+              <li><a href="adsampi.html#adsampiSection">Home</a></li>
+       <li><a href="tridi.html#tridiSection">3D Printing</a></li>
+        <li><a href="cad.html#cadSection">3D CAD</a></li>
+        <li><a href="rapid.html#cadSection"class="active">Rapid Prototyping</a></li>
+    </ul>
+    </div>
+
+<div class="center-button-container">
+  <a href="admintrack.php" class="center-button">Order Tracker</a>
+</div>
+
+
+<section class="products" id="products">
+  <div class="box-container">
+
+    <!-- Product 1 -->
+    <div class="box">
+      <div class="img-products" id="dropZone1">
+        <img id="productImage1" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid1.jpg" alt="Grip" />
+      </div>
+      <div class="description" contenteditable="false">Compact and precise RAPID designs of mini hinges engineered for smooth movement</div>
+      <div class="product-content" contenteditable="false"><h3>Mini Hinge</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div> 
+
+    <!-- Product 2 -->
+    <div class="box">
+      <div class="img-products" id="dropZone2">
+        <img id="productImage2" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid2.jpg" alt="Gear" />
+      </div>
+      <div class="description" contenteditable="false">Angled lock bars are designed for secure fastening and enhanced mechanical stability</div>
+      <div class="product-content" contenteditable="false"><h3>Angled Lock Bar</h3></div>
+      <div class="product-icons">
+      <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="box">
+      <div class="img-products" id="dropZone3">
+        <img id="productImage3" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid3.jpg" alt="Case" />
+      </div>
+      <div class="description" contenteditable="false"> Precision-crafted RAPID designs of mini lock straps offering reliable fastening and compact</div>
+      <div class="product-content" contenteditable="false"><h3>Mini Lock Strap</h3></div>
+      <div class="product-icons">
+        <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="box">
+      <div class="img-products" id="dropZone4">
+        <img id="productImage4" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid4.jpg" alt="Drone Frame" />
+      </div>
+      <div class="description" contenteditable="false">Models designed for rapid prototyping, enabling quick iteration and validation</div>
+      <div class="product-content" contenteditable="false"><h3> Rapid Prototype</h3></div>
+      <div class="product-icons">
+        <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="box">
+      <div class="img-products" id="dropZone5">
+        <img id="productImage5" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid5.jpg" alt="Keychain" />
+      </div>
+      <div class="description" contenteditable="false"> Detailed CAD models of motor parts engineered for optimal performance and durability</div>
+      <div class="product-content" contenteditable="false"><h3> Motor Parts</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="box">
+      <div class="img-products" id="dropZone6">
+        <img id="productImage6" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid6.jpg" alt="Cup Holder" />
+      </div>
+      <div class="description" contenteditable="false">Covers designed to hold electrical components such as switches or buttons.</div>
+      <div class="product-content" contenteditable="false"><h3>Socket Faceplates</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="box">
+      <div class="img-products" id="dropZone7">
+        <img id="productImage7" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid7.jpg" alt="Phone Stand" />
+      </div>
+      <div class="description" contenteditable="false">A group of various small mechanical or structural parts.</div>
+      <div class="product-content" contenteditable="false"><h3>Custom Mechanical Connectors Set</h3></div>
+      <div class="product-icons">
+          <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="box">
+      <div class="img-products" id="dropZone8">
+        <img id="productImage8" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid8.jpg" alt="Figurine" />
+      </div>
+      <div class="description" contenteditable="false">Precision RAPID designs of monitor replacement components engineered for seamless fit </div>
+      <div class="product-content" contenteditable="false"><h3>Monitor Replacement</h3></div>
+      <div class="product-icons">
+          <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="box">
+      <div class="img-products" id="dropZone9">
+        <img id="productImage9" src="c:\Users\jengn\OneDrive\Desktop\vsc\SAMPI 3D\photos\rapid9.jpg" alt="Lamp" />
+      </div>
+      <div class="description" contenteditable="false">Accurately modeled CAD designs of tuning lock pegs crafted for precise adjustment.</div>
+      <div class="product-content" contenteditable="false"><h3>Tuning Lock Peg</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+  </div>
+</section>
+ <div class="centered-content">
+    <div class="order-button-container">
+        <a href="orderForm.html" target="_blank" class="order-button">Order here</a>
+    </div>
+<script>
+  // Toggle edit mode
+  const editButton = document.getElementById("editButton");
+  let editing = false;
+
+  editButton.addEventListener("click", () => {
+    const descriptions = document.querySelectorAll(".description");
+    const contents = document.querySelectorAll(".product-content");
+
+    editing = !editing;
+
+    descriptions.forEach(d => d.contentEditable = editing);
+    contents.forEach(c => c.contentEditable = editing);
+
+    editButton.textContent = editing ? "Save Content" : "Edit Content";
+
+    if (!editing) {
+      // Optionally: save changes here or send to server
+      alert("Content saved! (This can be connected to backend later)");
+    }
+  });
+
+  // Drag and drop images for all products
+  function enableDragAndDrop(dropZoneId, imgId) {
+    const dropZone = document.getElementById(dropZoneId);
+    const img = document.getElementById(imgId);
+
+    dropZone.addEventListener("dragover", e => {
+      e.preventDefault();
+      dropZone.classList.add("drag-over");
+    });
+
+    dropZone.addEventListener("dragleave", e => {
+      dropZone.classList.remove("drag-over");
+    });
+
+    dropZone.addEventListener("drop", e => {
+      e.preventDefault();
+      dropZone.classList.remove("drag-over");
+
+      const file = e.dataTransfer.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = ev => {
+          img.src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please drop a valid image file.");
+      }
+    });
+  }
+
+  for (let i = 1; i <= 9; i++) {
+    enableDragAndDrop(`dropZone${i}`, `productImage${i}`);
+  }
+</script>
+
+
+    <div class="centered-content">
+        <h1 class="text">
+          Untitled Truly Worked Values Work Life Balance. We Work Hard, But At The End Of The Day You Can Switch Off
+        </h1>
+        <br><br>
+        <div class="logo-section">
+          <img src="photos/sampi.png" alt="Logo" class="logo">
+          <p style="font-weight: bold";>LIEN TECH</p>
+          <p>Sampi 3D</p>
+        </div>
+        <br>
+        <h1 class="bottom-text">
+          Like what you see? <a href="contacts.html" class="talk-link">Let's talk.</a>
+        </h1>
+      </div>
+
+     <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#about">Home</a></li>
+                        <li><a href="#gallery">About us</a></li>
+                        <li><a href="#customize">Contact</a></li>
+                        <li><a href="#feedback">News</a></li>
+                        <li><a href="#feedback">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>information</h4>
+                    <ul>
+                        <li><a href="#">0966 133 1517</a></li>
+                        <li><a href="#">inquiry.sampi@gmail.com</a></li>
+                        <li><a href="#">V.Reyes Subd., Malagasang 1-D, Imus, Philippines</a></li>
+                        <li><a href="#">Address</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/sampi3d"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Sampi 3D Printing Services | All Rights Reserved.</p>
+              </div>
+        </div>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    // Get the hamburger button and navbar
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarLinks = document.querySelector('.navbar');
+  
+    // Toggle the active class on click
+    navbarToggler.addEventListener('click', () => {
+      navbarToggler.classList.toggle('active');
+      navbarLinks.classList.toggle('active');
+    });
+  </script>
+  <script>
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+</section>
+
+</body>
+</html>

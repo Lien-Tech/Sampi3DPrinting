@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3d sampi printing service</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="orderForm.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbarr">
+      <a href="#" class="navbar-brand">
+        <img src="photos/sampi.png" alt="Your Logo" class="logo" />
+        3D Sampi Printing Service
+      </a>
+      <ul class="navbar">
+        <li><a href="adsampi.html">Home</a></li>
+        <li><a href="adabout.html">About Us</a></li>
+        <li><a href="adcontacts.html">Contact</a></li>
+        <li><a href="adgallery.html">Gallery</a></li>
+        <li><a href="adhelpcenter.html">FAQs</a></li>
+        <li><button class="login-btn"><a href="sign_up.html">Log Out</a></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    
+    <form id="orderForm" action="submit_order.php" method="POST" onsubmit="return handleSubmit(event)">
+    <h2>ORDER FORM</h2>
+      <!-- CUSTOMER INFO -->
+      <div class="mb-4">
+        <h5 class="mb-3 text-primary">Customer Information</h5>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" name="first_name" placeholder="Enter first name" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="last_name" placeholder="Enter last name" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" name="contact_number" placeholder="e.g., 0917xxxxxxx" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">House No. / Street</label>
+          <input type="text" class="form-control" name="house_address" placeholder="e.g., 123 Sampaguita St." required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Baranggay</label>
+          <input type="text" class="form-control" name="barangay" placeholder="e.g., Brgy. Malinis" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control" name="city" placeholder="e.g., Caloocan City" required />
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Country</label>
+          <input type="text" class="form-control" name="country" placeholder="e.g., Philippines" required />
+        </div>
+      </div>
+
+      <!-- ORDER SELECTION -->
+      <div class="mb-4">
+        <h5 class="mb-3 text-primary">Order Selection</h5>
+        <label class="form-label">Choose a Service Category</label>
+        <select class="form-select" name="service_category" id="serviceCategory" required>
+          <option value="" disabled selected>-- Select a category --</option>
+          <option value="printed">🖨️ 3D Printed Item</option>
+          <option value="cad">🖥️ 3D CAD Design</option>
+          <option value="prototype">⚡ Rapid Prototyping</option>
+        </select>
+
+        <label class="form-label mt-1">Price Range</label>
+        <p id="priceRangeDisplay" class="text-muted mb-3">Select a category to see price range.</p>
+
+        <label class="form-label mt-3">Choose an Item</label>
+        <select class="form-select" name="service_item" id="serviceItem" required >
+          <option value="" disabled selected>-- Select an item --</option>
+        </select>
+
+        <div id="customNameDiv" style="display:none; margin-top: 20px;">
+          <label class="form-label mt-3">Please specify the item name</label>
+          <input type="text" id="customNameInput" name="custom_name" class="form-control" placeholder="Type the item name here..." />
+        </div>
+
+        <div id="additionalFields" style="display:none; margin-top: 20px;">
+          <label class="form-label mt-3">Choose Color</label>
+          <select class="form-select" name="color" id="colorSelect" required>
+            <option value="" disabled selected>-- Select a color --</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="gray">Gray</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+          </select>
+
+          <label class="form-label mt-3">Size (cm)</label>
+          <div class="row">
+            <div class="col-md-4 mb-2">
+              <input type="number" name="size_length_cm" id="sizeLength" class="form-control" placeholder="Length (cm)" min="0" required />
+            </div>
+            <div class="col-md-4 mb-2">
+              <input type="number" name="size_width_cm" id="sizeWidth" class="form-control" placeholder="Width (cm)" min="0" required />
+            </div>
+            <div class="col-md-4 mb-2">
+              <input type="number" name="size_height_cm" id="sizeHeight" class="form-control" placeholder="Height (cm)" min="0" required />
+            </div>
+          </div>
+
+          <label class="form-label mt-3">Quantity</label>
+          <input type="number" id="qtyInput" name="quantity" class="form-control" placeholder="Enter quantity" required min="1" value="1" />
+
+          <label class="form-label mt-3">Estimated Time to Complete</label>
+          <input type="text" id="timeEstimate" name="estimated_time" class="form-control" readonly value="" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-lg btn-primary">Submit Order</button>
+      </div>
+    </form>
+
+    <!-- REVIEW TAB SECTION -->
+    <div id="reviewSection" style="display: none; margin-top: 40px;">
+      <h3 class="text-center text-success mb-4">Review Your Order</h3>
+      <div id="reviewDetails" class="mb-4"></div>
+      <div class="text-center d-flex justify-content-center gap-3">
+        <button class="btn btn-secondary btn-lg" onclick="goBack()">Go Back</button>
+        <button class="btn btn-success btn-lg" onclick="document.getElementById('orderForm').submit();">Confirm Order</button>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    const serviceCategory = document.getElementById("serviceCategory");
+    const serviceItem = document.getElementById("serviceItem");
+    const additionalFields = document.getElementById("additionalFields");
+    const qtyInput = document.getElementById("qtyInput");
+    const priceRangeDisplay = document.getElementById("priceRangeDisplay");
+    const sizeLength = document.getElementById("sizeLength");
+    const sizeWidth = document.getElementById("sizeWidth");
+    const sizeHeight = document.getElementById("sizeHeight");
+    const timeEstimate = document.getElementById("timeEstimate");
+    const customNameDiv = document.getElementById("customNameDiv");
+
+    const serviceOptions = {
+      printed: ["Prosthetic Limbs", "Drone Frame", "Tool Holders", "Vases & Planters", "Gears & Cogs", "Replacement Parts", "RC Car Parts"],
+      cad: ["Engine Block", "Gear Assembly", "Bike Frame", "Robot Arm", "Furniture Design", "Circuit Enclosure", "Watch Mechanism", "Bottle Design"],
+      prototype: ["Product Mockups", "Wearable Tech", "Custom Enclosures", "Medical Models", "Automotive Testing", "Consumer Devices", "Footwear Design", "Industrial Fixtures"]
+    };
+
+    const priceRanges = {
+      printed: { min: 50, max: 4000 },
+      cad: { min: 50, max: 3000 },
+      prototype: { min: 500, max: 5000 }
+    };
+
+    serviceCategory.addEventListener("change", function () {
+      const selected = this.value;
+      const range = priceRanges[selected];
+      priceRangeDisplay.textContent = `Price range: ₱${range.min} - ₱${range.max}`;
+
+      serviceItem.innerHTML = '<option value="" disabled selected>-- Select an item --</option>';
+      serviceOptions[selected].forEach(item => {
+        const opt = document.createElement("option");
+        opt.value = item;
+        opt.textContent = item;
+        serviceItem.appendChild(opt);
+      });
+
+      const customOpt = document.createElement("option");
+      customOpt.value = "others_custom";
+      customOpt.textContent = "Others (Custom)";
+      serviceItem.appendChild(customOpt);
+
+      serviceItem.disabled = false;
+      additionalFields.style.display = "none";
+      customNameDiv.style.display = "none";
+    });
+
+    serviceItem.addEventListener("change", function () {
+      if (this.value === "others_custom") {
+        customNameDiv.style.display = "block";
+      } else {
+        customNameDiv.style.display = "none";
+      }
+
+      additionalFields.style.display = "block";
+    });
+
+    function updateTimeEstimate() {
+      const qty = parseInt(qtyInput.value) || 1;
+      const length = parseFloat(sizeLength.value) || 0;
+      const width = parseFloat(sizeWidth.value) || 0;
+      const height = parseFloat(sizeHeight.value) || 0;
+
+      const volume = length * width * height;
+      const baseTime = Math.ceil(volume / 5000);
+      const estimatedDays = baseTime * qty;
+
+      timeEstimate.value = `${estimatedDays} day(s)`;
+    }
+
+    qtyInput.addEventListener("input", updateTimeEstimate);
+    sizeLength.addEventListener("input", updateTimeEstimate);
+    sizeWidth.addEventListener("input", updateTimeEstimate);
+    sizeHeight.addEventListener("input", updateTimeEstimate);
+
+    const inputs = document.querySelectorAll("form input[type='text']");
+    inputs.forEach(input => {
+      if (input.id !== "customNameInput") {
+        input.addEventListener("input", () => {
+          input.value = input.value.toUpperCase();
+        });
+      }
+    });
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const review = document.getElementById("reviewDetails");
+
+      const getVal = sel => document.querySelector(sel).value;
+      const getSelText = sel => sel.options[sel.selectedIndex].text;
+
+      const category = getSelText(serviceCategory);
+      const item = getSelText(serviceItem);
+      const custom = getVal("#customNameInput");
+
+      review.innerHTML = `
+        <h5 class="section-heading">Customer Info</h5>
+        <p><strong>Name:</strong> ${getVal("input[placeholder='Enter first name']")} ${getVal("input[placeholder='Enter last name']")}</p>
+        <p><strong>Email:</strong> ${getVal("input[placeholder='Enter your email']")}</p>
+        <p><strong>Contact:</strong> ${getVal("input[placeholder*='0917']")}</p>
+        <p><strong>Address:</strong> ${getVal("input[placeholder*='Sampaguita']")}, ${getVal("input[placeholder*='Brgy']")}, ${getVal("input[placeholder*='City']")}, ${getVal("input[placeholder*='Philippines']")}</p>
+        <h5 class="section-heading">Order Info</h5>
+        <p><strong>Category:</strong> ${category}</p>
+        <p><strong>Item:</strong> ${item}</p>
+        ${item === "Others (Custom)" ? `<p><strong>Custom Name:</strong> ${custom}</p>` : ""}
+        <p><strong>Color:</strong> ${getVal("#colorSelect")}</p>
+        <p><strong>Size:</strong> ${getVal("#sizeLength")} x ${getVal("#sizeWidth")} x ${getVal("#sizeHeight")} cm</p>
+        <p><strong>Quantity:</strong> ${getVal("#qtyInput")}</p>
+        <p><strong>Estimated Time:</strong> ${getVal("#timeEstimate")}</p>
+      `;
+
+      document.getElementById("reviewSection").style.display = "block";
+      document.getElementById("reviewSection").scrollIntoView({ behavior: "smooth" });
+
+      return false;
+    }
+
+    function confirmOrder() {
+      alert("Your order has been recorded. Please check your email for faster and smoother transaction processing.");
+      document.querySelector("form").reset();
+      document.getElementById("reviewSection").style.display = "none";
+      priceRangeDisplay.textContent = "Select a category to see price range.";
+      serviceItem.disabled = true;
+      additionalFields.style.display = "none";
+      customNameDiv.style.display = "none";
+      window.location.href = "adsampi.html";
+    }
+
+    function goBack() {
+      document.getElementById("reviewSection").style.display = "none";
+      document.querySelector("form").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

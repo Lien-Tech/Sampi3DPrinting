@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Help Center</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .editable {
+      border: 1px dashed transparent;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .editable[contenteditable="true"] {
+      border-color: gray;
+      background-color: #f9f9f9;
+      outline: none;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+        <div class="navbarr">
+            <a href="#" class="navbar-brand">
+                <img src="photos/sampi.png" alt="Your Logo" class="logo" />
+                3D Sampi Printing Service
+            </a>
+            <div class="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar">
+            <button id="editButton">Edit Content</button>
+            <li><a href="adsampi.html">Home</a></li>
+            <li><a href="adabout.html">About Us</a></li>
+            <li><a href="adcontacts.html">Contact</a></li>
+            <li><a href="adgallery.html">Gallery</a></li>
+            <li><a href="adhelpcenter.html">FAQs</a></li>
+            <li><button class="login-btn"><a href="sign_up.html">Log Out</a></button></li>
+        </div>
+    </nav>
+
+  <main class="container my-4">
+    <h1 class="mb-4" id="editable">Edit FAQs</h1>
+
+    <div id="faq-list"></div>
+
+    <button id="add-faq" class="btn btn-primary mb-3">Add FAQ</button>
+    <button id="save-faqs" class="btn btn-success mb-3">Save FAQs</button>
+  </main>
+
+   <footer class="footer">
+  <div class="container-footer">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#gallery">About us</a></li>
+          <li><a href="#customize">Contact</a></li>
+          <li><a href="#feedback">News</a></li>
+          <li><a href="#feedback">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>information</h4>
+        <ul>
+          <li><a href="#">0966 133 1517</a></li>
+          <li><a href="#">inquiry.sampi@gmail.com</a></li>
+          <li><a href="#">V.Reyes Subd., Malagasang 1-D, Imus, Philippines</a></li>
+          <li><a href="#">Address</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/sampi3d"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2024 Sampi 3D Printing Services | All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const faqList = document.getElementById('faq-list');
+    const addFaqBtn = document.getElementById('add-faq');
+    const saveFaqsBtn = document.getElementById('save-faqs');
+
+    // Load existing FAQs from JSON
+    async function loadFaqs() {
+      const res = await fetch('helpcenter.php');
+      const faqs = await res.json();
+      faqList.innerHTML = '';
+      faqs.forEach((faq, index) => {
+        addFaqItem(faq.question, faq.answer, index);
+      });
+    }
+
+    // Create a single FAQ item element
+    function addFaqItem(question = '', answer = '', index) {
+      const div = document.createElement('div');
+      div.className = 'faq-item border rounded p-3 mb-3';
+
+      div.innerHTML = `
+        <label>Question:</label>
+        <div class="editable" contenteditable="true" data-field="question">${question}</div>
+        <label>Answer:</label>
+        <div class="editable" contenteditable="true" data-field="answer">${answer}</div>
+        <button class="btn btn-danger btn-sm mt-2 remove-faq">Remove</button>
+      `;
+
+      // Remove button functionality
+      div.querySelector('.remove-faq').addEventListener('click', () => {
+        div.remove();
+      });
+
+      faqList.appendChild(div);
+    }
+
+    // Add new blank FAQ
+    addFaqBtn.addEventListener('click', () => {
+      addFaqItem('', '', faqList.children.length);
+    });
+
+    // Save all FAQs back to JSON via PHP
+    saveFaqsBtn.addEventListener('click', async () => {
+      const faqItems = faqList.querySelectorAll('.faq-item');
+      const faqsToSave = [];
+
+      faqItems.forEach(item => {
+        const question = item.querySelector('[data-field="question"]').innerText.trim();
+        const answer = item.querySelector('[data-field="answer"]').innerText.trim();
+        if (question && answer) {
+          faqsToSave.push({ question, answer });
+        }
+      });
+
+      try {
+        const res = await fetch('helpcenter.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(faqsToSave)
+        });
+        const data = await res.json();
+        alert(data.message || 'FAQs saved successfully!');
+      } catch (err) {
+        alert('Error saving FAQs.');
+      }
+    });
+
+    // Initial load
+    loadFaqs();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

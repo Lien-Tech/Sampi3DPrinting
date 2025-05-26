@@ -1,0 +1,35 @@
+{
+  "title": "We Help Growing Brands Become Radically Relevant",
+  "intro": "3d sampi is the brand identity house for leaders taking bold steps toward a radically relevant brand. We partner with organizations in growth mode to help navigate the brand side of change, powered by a focused strategy and all the creative firepower you need to create the identity your brand deserves.\n\nInterested in how we can help you? <a style='color:red' href='contacts.html'>Let's talk.</a>",
+  "we_do": "Custom 3D Printing: Unique models tailored to your specifications.<br>Prototyping Solutions: Rapidly test and refine product concepts.<br>Educational Support: Integrate 3D printing into interactive learning.<br>Creative & Functional Projects: From artistic sculptures to everyday tools.<br>Repair and Replacement Parts: Recreate unavailable parts with precision.",
+  "we_are_1": "Sampi 3D Printing is a proudly homegrown business located in the heart of Imus City, Cavite. We are passionate about harnessing modern 3D printing technology to create innovative and practical solutions for individuals, educators, and businesses.",
+  "we_are_2": "Founded on the belief that imagination and innovation should be accessible to everyone, we blend creativity, precision, and technology to empower clients and bring ideas to life. Our commitment to fostering strong connections within our local community ensures that every project we undertake is completed with reliability and care.",
+  "we_offer": "Prototyping, product design, and custom manufacturing services.\nLow-volume manufacturing for innovative and cost-effective production.\nPrecision recreation of replacement parts for obsolete components.\nComprehensive 3D printing solutions for businesses and personal projects.",
+  "values": {
+    "courage": "We strive for courage over comfort, knowing better relationships and better work are on the other side.",
+    "truth": "We aim to be interested over being interesting. Our human way of approaching people and problems eliminates embellishment, leading to thoughtful, clear, and intuitive work.",
+    "harmony": "Suspending judgment, we extend the most generous interpretation possible to the intentions, words, and actions of others."
+  },
+  "crew": {
+    "top": {
+      "name": "Van Harold H. Sampot",
+      "role": "Owner and Operations Manager"
+    },
+    "bottom": [
+      {
+        "name": "Shekinah Loius Grace Saulong",
+        "role": "Admin and Marketing"
+      },
+      {
+        "name": "Van Allen H. Sampot",
+        "role": "Fabricator"
+      },
+      {
+        "name": "Ed Manicio",
+        "role": "Fabricator"
+      }
+    ]
+  },
+  "footer_note": "Untitled Truly Worked Values Work Life Balance. We Work Hard, But At The End Of The Day You Can Switch Off",
+  "cta": "Like what you see? <a href='contacts.html' class='talk-link'>Let's talk.</a>"
+}

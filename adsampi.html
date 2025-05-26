@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d sampi printing service</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="admin.js"></script>
+    
+</head>
+<body>
+<nav>
+        <div class="navbarr">
+            <a href="#" class="navbar-brand">
+                <img src="photos/sampi.png" alt="Your Logo" class="logo" />
+                3D Sampi Printing Service
+            </a>
+            <div class="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar">
+            <button id="editButton">Edit Content</button>
+            <li><a href="adsampi.html">Home</a></li>
+            <li><a href="adabout.html">About Us</a></li>
+            <li><a href="adcontacts.html">Contact</a></li>
+            <li><a href="adgallery.html">Gallery</a></li>
+            <li><a href="adhelpcenter.html">FAQs</a></li>
+            <li><button class="login-btn"><a href="sign_up.html">Log Out</a></button></li>
+        </div>
+    </nav>
+
+    <br>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="photos/Property 1=Frame 2.jpg"
+            class="d-block w-100"
+            alt="3D Printing Service"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>
+              BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span>
+            </h1>
+            <h5>
+              Offers 3D printing services, including prototyping, product design,
+              and custom manufacturing.
+            </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="photos/Property 1=Frame 3.jpg"
+            class="d-block w-100"
+            alt="Prototyping"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>
+              BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span>
+            </h1>
+            <h5>
+              Offers 3D printing services, including prototyping, product design,
+              and custom manufacturing.
+            </h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="photos/Property 1=Frame 4.jpg"
+            class="d-block w-100"
+            alt="Custom Manufacturing"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1>
+              BRING YOUR IDEA TO <span style="color: #2873A2;">LIFE</span>
+            </h1>
+            <h5>
+              Offers 3D printing services, including prototyping, product design,
+              and custom manufacturing.
+            </h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<section id="adsampiSection">
+        <ul class="header-option">
+            <li><a href="adsampi.html#adsampiSection"class="active">Home</a></li>
+        <li><a href="tridi.html#tridiSection">3D Printing</a></li>
+         <li><a href="cad.html#cadSection">3D CAD</a></li>
+          <li><a href="rapid.html#rapidSection">Rapid Prototyping</a></li>
+    </ul>
+    </div>
+    </section>
+
+<div class="center-button-container">
+  <a href="admintrack.php" class="center-button">Order Tracker</a>
+</div>
+
+<section class="products" id="products">
+  <div class="box-container">
+
+    <!-- Product 1 -->
+    <div class="box">
+      <div class="img-products" id="dropZone1">
+        <img id="productImage1" src="photos/17.jpg" alt="Grip" />
+      </div>
+      <div class="description" contenteditable="false">Custom-designed airgun hand grip, tailored for precision and comfort.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Airgun Hand Grip</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div> 
+
+    <!-- Product 2 -->
+    <div class="box">
+      <div class="img-products" id="dropZone2">
+        <img id="productImage2" src="photos/IMG_3177.JPG" alt="Gear" />
+      </div>
+      <div class="description" contenteditable="false">High-durability 3D printed gear, perfect for mechanical use and prototyping.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Mechanical Gear</h3></div>
+      <div class="product-icons">
+       <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="box">
+      <div class="img-products" id="dropZone3">
+        <img id="productImage3" src="photos/IMG_3178.JPG" alt="Case" />
+      </div>
+      <div class="description" contenteditable="false">Stylish and protective 3D printed case for electronics and gadgets.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Gadget Case</h3></div>
+      <div class="product-icons">
+       <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="box">
+      <div class="img-products" id="dropZone4">
+        <img id="productImage4" src="photos/IMG_3179.JPG" alt="Drone Frame" />
+      </div>
+      <div class="description" contenteditable="false">Lightweight and durable 3D printed drone frame for DIY enthusiasts.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Drone Frame</h3></div>
+      <div class="product-icons">
+      <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="box">
+      <div class="img-products" id="dropZone5">
+        <img id="productImage5" src="photos/IMG_3180.JPG" alt="Keychain" />
+      </div>
+      <div class="description" contenteditable="false">Customizable 3D printed keychains for personalized gifting.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Keychain</h3></div>
+      <div class="product-icons">
+         <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="box">
+      <div class="img-products" id="dropZone6">
+        <img id="productImage6" src="photos/IMG_3182.JPG" alt="Cup Holder" />
+      </div>
+      <div class="description" contenteditable="false">Innovative 3D printed cup holders for desks and cars.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Cup Holder</h3></div>
+      <div class="product-icons">
+      <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="box">
+      <div class="img-products" id="dropZone7">
+        <img id="productImage7" src="photos/IMG_3183.JPG" alt="Phone Stand" />
+      </div>
+      <div class="description" contenteditable="false">Sleek and adjustable 3D printed phone stand for convenience.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Phone Stand</h3></div>
+      <div class="product-icons">
+       <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="box">
+      <div class="img-products" id="dropZone8">
+        <img id="productImage8" src="photos/IMG_3184.JPG" alt="Figurine" />
+      </div>
+      <div class="description" contenteditable="false">Intricate 3D printed figurines for collectors and decor lovers.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Figurine</h3></div>
+      <div class="product-icons">
+      <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="box">
+      <div class="img-products" id="dropZone9">
+        <img id="productImage9" src="photos/IMG_3185.JPG" alt="Lamp" />
+      </div>
+      <div class="description" contenteditable="false">Modern 3D printed lamp for stylish home lighting solutions.</div>
+      <div class="product-content" contenteditable="false"><h3>3D Printed Lamp</h3></div>
+      <div class="product-icons">
+      <a href="orderForm.html" class="fa-solid fa-cart-shopping"></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   <div class="centered-content">
+    <div class="order-button-container">
+    <a href="orderForm.html" target="_blank" class="order-button">Order here</a>
+    </div>
+
+        <h1 class="text">
+          Untitled Truly Worked Values Work Life Balance. We Work Hard, But At The End Of The Day You Can Switch Off
+        </h1>
+        <br><br>
+        <div class="logo-section">
+          <img src="photos/sampi.png" alt="Logo" class="logo">
+          <p style="font-weight: bold";>LIEN TECH</p>
+          <p>Sampi 3D</p>
+        </div>
+        <br>
+        <h1 class="bottom-text">
+          Like what you see? <a href="adcontacts.html" class="talk-link">Let's talk.</a>
+        </h1>
+      </div>
+
+     <footer class="footer">
+  <div class="container-footer">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#gallery">About us</a></li>
+          <li><a href="#customize">Contact</a></li>
+          <li><a href="#feedback">News</a></li>
+          <li><a href="#feedback">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>information</h4>
+        <ul>
+          <li><a href="#">0966 133 1517</a></li>
+          <li><a href="#">inquiry.sampi@gmail.com</a></li>
+          <li><a href="#">V.Reyes Subd., Malagasang 1-D, Imus, Philippines</a></li>
+          <li><a href="#">Address</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/sampi3d"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2024 Sampi 3D Printing Services | All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    // Get the hamburger button and navbar
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarLinks = document.querySelector('.navbar');
+  
+    // Toggle the active class on click
+    navbarToggler.addEventListener('click', () => {
+      navbarToggler.classList.toggle('active');
+      navbarLinks.classList.toggle('active');
+    });
+  </script>
+<script src="admin.js"></script>
+
+</body>
+</html>

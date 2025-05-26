@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "3D Printed Airgun Hand Grip",
+        "description": "Custom-designed airgun hand grip, tailored for precision and comfort.",
+        "image_path": "uploads\/product1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "3D Printed Mechanical",
+        "description": "High-durability 3D printed gear, perfect for mechanical use and prototyping.",
+        "image_path": "uploads\/product2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "3D Printed Gadget Case",
+        "description": "Stylish and protective 3D printed case for electronics and gadgets.",
+        "image_path": "uploads\/product3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "3D Printed Drone Frame",
+        "description": "Lightweight and durable 3D printed drone frame for DIY enthusiasts.",
+        "image_path": "uploads\/product4.jpg"
+    },
+    {
+        "id": 5,
+        "title": "3D Printed Keychain",
+        "description": "Customizable 3D printed keychains for personalized gifting.",
+        "image_path": "uploads\/product5.jpg"
+    },
+    {
+        "id": 6,
+        "title": "3D Printed Cup Holder",
+        "description": "Innovative 3D printed cup holders for desks and cars.",
+        "image_path": "uploads\/product6.jpg"
+    },
+    {
+        "id": 7,
+        "title": "3D Printed Phone Stand",
+        "description": "Sleek and adjustable 3D printed phone stand for convenience.",
+        "image_path": "uploads\/product7.jpg"
+    },
+    {
+        "id": 8,
+        "title": "3D Printed Figurine",
+        "description": "Intricate 3D printed figurines for collectors and decor lovers.",
+        "image_path": "uploads\/product8.jpg"
+    },
+    {
+        "id": 9,
+        "title": "3D Printed Lamp",
+        "description": "Modern 3D printed lamp for stylish home lighting solutions.",
+        "image_path": "uploads\/product9.jpg"
+    }
+]
