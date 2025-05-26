@@ -122,7 +122,12 @@ body {
     background-color: var(--secondary-color);
     transform: scale(0.98);
   }
-  
+
+  button#editButton {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  }
   /* Mobile (small screens) styles */
   @media (max-width: 768px) {
     .navbarr {
